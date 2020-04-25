@@ -24,10 +24,9 @@ public class User implements Serializable {
 	    @Column(nullable = false)
 	    private String  lastname;
 	    private String  email;
-		
+
 	    
-	    
-	    public Integer getDni() {
+		public Integer getDni() {
 			return dni;
 		}
 		public void setDni(Integer dni) {

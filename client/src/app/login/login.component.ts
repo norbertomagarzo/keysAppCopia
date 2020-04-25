@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl} from '@angular/forms';
-import { LoginService } from '../login.service';
+import { LoginService } from '../Service/login.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,18 +11,31 @@ import { Router } from '@angular/router';
 
 export class LoginComponent {
 
+  username: string;
+  password: string;
+  message: any
+
   constructor(private loginService: LoginService, private router: Router) {
 
   }
 
   profileForm = new FormGroup({
-    dni: new FormControl(''),
-    pass: new FormControl('')
+    username: new FormControl(''),
+    password: new FormControl('')
   })
 
   onSubmit() {
-    console.warn(this.profileForm.value);
-    this.router.navigate(["adminhome"]);
+    let resp = this.loginService.login(this.username, this.password);
+
+    resp.subscribe(data => {
+      console.log(data)
+      this.message = data;
+     if(data == 'ok' )
+     { this.router.navigate(["admin"])}
+     else{
+       alert('usuario o contraseña mal puesta')
+     }
+    });
   }
 
   onKeyDown(e: KeyboardEvent) {
@@ -57,4 +70,5 @@ export class LoginComponent {
       .replace(/\D/g, ''); // get a digit-only string
     document.execCommand('insertText', false, pastedInput);
   }
-}
+
+} //Fin clase
