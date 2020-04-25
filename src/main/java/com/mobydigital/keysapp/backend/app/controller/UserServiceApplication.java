@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class UserServiceApplication {
 
-	@GetMapping("/")
+	/*@GetMapping("/")
 	public String login(Integer username, Integer password) {
 
 		if (username == 1234 && password == 1234) {
@@ -20,9 +20,9 @@ public class UserServiceApplication {
 
 		return "error";
 
-	}
-	/*
-	 * public String login() { return "Hola Moby!!!!"; }
-	 */
+	}*/
+	@GetMapping("/")
+	 public String login() { return "Hola Moby!!!!"; }
+	 
 
 }
