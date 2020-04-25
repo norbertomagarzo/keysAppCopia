@@ -1,4 +1,4 @@
-INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455701', 'norberto', 'magarzo', '3434343', 'norberto@gmail.com');
+INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455701', 'norbertooooo', 'magarzo', '3434343', 'norberto@gmail.com');
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455702', 'agustin', 'magarzo', '3434343', 'norberto@gmail.com');
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455703', 'agustin', 'magarzo', '3434343', 'norberto@gmail.com');
 INSERT INTO `users` (`dni`, `name`, `lastname`, `telephone`, `email`) VALUES ('34455704', 'agustin', 'magarzo', '3434343', 'norberto@gmail.com');
